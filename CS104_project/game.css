@@ -1,0 +1,393 @@
+.playground{
+  background-image: url(grass.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  display: grid;
+  
+}
+.scoreboard{
+  width: 40%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #8B4513;
+  border: 20px solid #FFFF66 ;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.screen{
+  display: flex;
+  font-family: 'Patrick Hand', cursive;
+}
+.but{
+  width: 180px;
+  height: 50px;
+  background-color:#FFFF66 ;
+  color: #8B4513; 
+  font-size: 20px; 
+}
+input{
+  width: 40px;
+  height:30px;
+  border-radius: 5px;
+  border: 3px;
+}
+#go{
+  width: 180px;
+  height: 50px;
+  background-color:#FFFF66 ;
+  color: #8B4513; 
+  font-size: 20px; 
+}
+
+h1{
+  font-family:'Luckiest Guy', cursive;
+}
+.menu{
+  height: 50px; 
+  width: 210px;
+  font-size: 25px; 
+  background-color: #8B4513; 
+  font-family: 'Patrick Hand', cursive; 
+  color: #FFFF66; 
+  border: 3px solid yellow; 
+  border-radius: 10px; 
+  margin: 15px;
+  cursor: pointer;
+  box-shadow: 0 9px #FFFF66;
+}
+.menu:hover{
+  box-shadow: 0 9px yellow;
+  font-size: 27px;
+}
+.menu:active{
+  transform: translateY(5px);
+  box-shadow: 0 5px yellow;
+}
+.overlay{
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.one-player{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: #8B4513;
+  color: #FFFF66;
+  border: 5px solid #FFFF66;
+  border-radius: 15px;
+  align-self: center;
+  font-size: 18px;
+
+}
+.instruction-button{
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  background-color: #8B4513;
+  color: #FFFF66;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: bolder;
+  box-shadow: 0 9px yellow;
+  border-radius: 10px;
+  border: 3px solid yellow;
+  align-self: center;
+}
+.instruction-button:hover{
+ 
+  font-size: 27px;
+}
+.instruction-button:active{
+  transform: translateY(5px);
+  box-shadow: 0 4px yellow;
+}
+#grid{
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
+#grid TR TD{
+  border: 3px solid black;
+  background-color: lime;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+#grid TR TD.clicked{
+  background-color: limegreen;
+  font-size: 16px;
+}
+#grid TR TD.chars{
+  background-color: green;
+  color: yellow;
+  font-size: 16px;
+}
+#grid TR TD.chheh{
+  background-color: green;
+  color: yellow;
+  font-size: 16px;
+}
+
+#grid TR TD.fielder{
+  background-color: #FF3333;
+  background-image: url(player.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#grid TR TD.bomb{
+  background-image: url(bomb.png)  ;
+  background-size: cover;
+}
+.gameOver{
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFF66;
+}
+.lostLifeline{
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFF66;
+}
+.four{
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFF66;
+}
+.six{
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFF66;
+}
+.overButton{
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  background-color: #8B4513;
+  color: #FFFF66;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: bolder;
+  box-shadow: 0 9px yellow;
+  border-radius: 10px;
+  border: 3px solid yellow;
+  align-self: center;
+}
+#status{
+  width: 100%;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#status td{
+  font-size: 60px;
+  color: #FFFF66;
+  border: 10px solid #FFFF66;
+}
+li{
+  font-size: 30px;
+}
+.quitGame{
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+#one h2{
+  margin: 20px; font-size: 35px;
+}
+
+#gameOver h1{
+  font-size: 120px;
+}
+#gameOver h2{
+  font-size: 100px;
+}
+.QG{
+position: relative;
+top: 40%;
+left: 25%;
+}
+#lostLifeline h1{
+  font-size: 80px;
+  position: relative; 
+  top: 40%;
+}
+#four h1{
+  font-size: 80px;
+  position: relative; 
+  top: 40%;
+}
+#six h1{
+  font-size: 80px;
+  position: relative; 
+  top: 40%;
+}
+.heading{
+  color:#FFFF66; font-size: 55px;
+}
+label{
+  color: #FFFF66; font-size: 25px;
+}
+#pl1, #pl2{
+  display: none; 
+  margin: 10px;
+}
+#status th{
+  font-size: 40px;
+  color: #8B4513;
+  background-color: #FFFF66; 
+  width: 50%;
+}
+.downI{
+  display: none;
+  bottom: 10px; 
+  position: absolute; 
+  margin-left: 40px;
+}
+#scores{
+  display: none;
+  text-align: center;
+}
+#wish{
+  color:#FFFF66; 
+  font-size: 50px;
+}
+#menu{
+  margin-top: 100px;
+}
+.finalSetting{
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.St{
+  position: relative;
+  top: 40%;
+}
+.changeDim{
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.chdim{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 40%;
+  height: 20%;
+  background-color: #8B4513;
+  color: #FFFF66;
+  border: 5px solid #FFFF66;
+  border-radius: 15px;
+  align-self: center;
+  font-size: 18px;
+}
