@@ -169,7 +169,7 @@ function addFielders(){
 
 function addBomb(){
   const gridSize  = document.getElementById("dimension").value;
-    for(var i=0;i<(gridSize*gridSize/10);i++){
+    for(var i=0;i<(gridSize-4);i++){
         var row = Math.floor(Math.random()*gridSize);
         var col = Math.floor(Math.random()*gridSize);
         var cell = grid.rows[row].cells[col];
